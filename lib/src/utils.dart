@@ -395,7 +395,7 @@ class _Mutex {
   int issued = 0;
 
   Future<bool> take() async {
-    await Future.delayed(Duration(milliseconds:200)); 
+    await Future.delayed(Duration(milliseconds:300)); 
     print("BLE SLOWED");
     int mine = issued;
     issued++;
