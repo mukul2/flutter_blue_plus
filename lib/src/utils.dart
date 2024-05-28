@@ -396,6 +396,7 @@ class _Mutex {
 
   Future<bool> take() async {
     await Future.delayed(Duration(milliseconds:500)); 
+    print("BLE SLOWED");
     int mine = issued;
     issued++;
     // tasks are executed in the same order they call take()
