@@ -395,6 +395,7 @@ class _Mutex {
   int issued = 0;
 
   Future<bool> take() async {
+    await Future.delayed(Duration(milliseconds:500)); 
     int mine = issued;
     issued++;
     // tasks are executed in the same order they call take()
